@@ -1,0 +1,20 @@
+BAD_SQUARE(a+1)  = 9  (expected 25; expands to a+1 * a+1 = 4+1*4+1)
+SQUARE(a+1)      = 25  (correct)
+BAD_MAX(i++, j)  = 6, i is now 7  (i++ ran twice, expected i = 6)
+max_fn(i++, j)   = 5, i is now 6  (argument evaluated once)
+square_fn(a+1)   = 25
+RUPEES_TO_PAISE(162) = 16200
+
+== gcc -E task04.c (tail)
+
+    int i = 5, j = 3;
+    int m = ((i++) > (j) ? (i++) : (j));
+    printf("BAD_MAX(i++, j)  = %d, i is now %d  (i++ ran twice, expected i = 6)\n", m, i);
+    i = 5;
+    m = max_fn(i++, j);
+    printf("max_fn(i++, j)   = %d, i is now %d  (argument evaluated once)\n", m, i);
+
+    printf("square_fn(a+1)   = %d\n", square_fn(a + 1));
+    printf("RUPEES_TO_PAISE(162) = %ld\n", ((162) * 100L));
+    return 0;
+}
