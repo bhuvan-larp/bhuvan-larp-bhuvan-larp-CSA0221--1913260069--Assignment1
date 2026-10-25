@@ -1,0 +1,26 @@
+== task02_complete
+sizeof(meter_t) = 2 bytes, maximum reading = 65535
+Consumption: 330 units
+Consumption: 256 units
+
+== task02_types
+Type                 Bytes  Min                        Max
+char                 1      -128                       127
+short                2      -32768                     32767
+unsigned short       2      0                          65535
+int                  4      -2147483648                2147483647
+unsigned int         4      0                          4294967295
+long                 8      -9223372036854775808       9223372036854775807
+long long            8      -9223372036854775808       9223372036854775807
+float                4      1.175494e-38               3.402823e+38
+double               8      2.225074e-308              1.797693e+308
+float digits of precision: 6, double: 15
+
+District worst case 400000000000 paise: fits int? no, long (64-bit)? yes
+
+unsigned short 65535 + 1 = 0 (wraps to 0)
+
+Expected exact total : Rs 648400.00
+float rupees total   : Rs 648404.88
+long paise total     : Rs 648400.00
+float error          : Rs 4.88
