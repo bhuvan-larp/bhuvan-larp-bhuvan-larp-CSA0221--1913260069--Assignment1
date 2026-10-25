@@ -1,0 +1,13 @@
+== task03_complete
+  0 units -> Rs 50.00
+100 units -> Rs 50.00
+150 units -> Rs 162.50
+200 units -> Rs 275.00
+350 units -> Rs 950.00
+== task03_const_enum
+  0 units -> Rs 50.00
+100 units -> Rs 50.00
+150 units -> Rs 162.50
+200 units -> Rs 275.00
+350 units -> Rs 950.00
+sizeof(RATE2_PAISE const) = 8 bytes of storage; a #define uses 0
