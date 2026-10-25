@@ -1,0 +1,35 @@
++ gcc -E task08.c -o task08.i
++ gcc -S task08.c -o task08.s
++ gcc -c task08.c -o task08.o
++ gcc task08.o -o task08
++ ./task08
+150 units -> Rs 100.00
++ wc -l task08.c task08.i task08.s
+   19 task08.c
+  832 task08.i
+  114 task08.s
+  965 total
++ set +x
+--- compile-time error ---
+error_compile.c: In function 'main':
+error_compile.c:6:5: error: expected ',' or ';' before 'printf'
+    6 |     printf("%d\n", y);
+      |     ^~~~~~
+--- link-time error ---
+/usr/bin/ld: /tmp/cc18Zc4t.o: in function `main':
+error_link.c:(.text+0xe): undefined reference to `compute_bill'
+collect2: error: ld returned 1 exit status
+--- run-time error ---
+Floating point exception
+exit status: 136
+--- warnings with -Wall -Wextra ---
+warning_demo.c: In function 'main':
+warning_demo.c:7:14: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+    7 |     printf("%d\n", p);     /* -Wformat: %d with a long. Fix: use %ld */
+      |             ~^     ~
+      |              |     |
+      |              int   long int
+      |             %ld
+warning_demo.c:5:9: warning: unused variable 'unused' [-Wunused-variable]
+    5 |     int unused;            /* -Wunused-variable: fix by deleting it */
+      |         ^~~~~~
