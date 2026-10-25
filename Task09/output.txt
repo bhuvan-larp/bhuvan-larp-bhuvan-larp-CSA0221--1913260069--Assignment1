@@ -1,0 +1,15 @@
+line  house    prev     curr     units  bill       status
+1     1        10       10       0      Rs 50.00 OK
+2     2        100      200      100    Rs 50.00 OK
+3     3        1000     1150     150    Rs 162.50 OK
+4     4        2000     2200     200    Rs 275.00 OK
+5     5        500      850      350    Rs 950.00 OK
+6     6        65400    120      256    Rs 527.00 OK (roll-over)
+7     7        abc      100      -      -          INVALID (not a number)
+8     8        -5       100      -      -          INVALID (negative or out of range)
+9     9        500      400      65436  -          INVALID (current < previous, no roll-over)
+10    10       65535    65535    0      Rs 50.00 OK
+11    -        -        -        -      -          INVALID (need 3 fields)
+
+valid bills: 7, invalid lines: 4
+total of valid bills: Rs 2064.50
