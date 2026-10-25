@@ -1,0 +1,25 @@
+== normal build
+  0 units -> Rs 50.00
+100 units -> Rs 50.00
+150 units -> Rs 162.50
+200 units -> Rs 275.00
+350 units -> Rs 950.00
+== gcc -DDEBUG
+[DEBUG] units=0 fixed=5000
+  0 units -> Rs 50.00
+[DEBUG] units=100 fixed=5000
+100 units -> Rs 50.00
+[DEBUG] units=150 fixed=5000
+[DEBUG] slab2 charge=11250
+150 units -> Rs 162.50
+[DEBUG] units=200 fixed=5000
+[DEBUG] slab2 charge=22500
+200 units -> Rs 275.00
+[DEBUG] units=350 fixed=5000
+[DEBUG] slab3 charge=67500
+[DEBUG] slab2 charge=22500
+350 units -> Rs 950.00
+== run-time debug variant
+[debug] units=150
+[debug] bill=16250 paise
+150 units -> Rs 162.50
