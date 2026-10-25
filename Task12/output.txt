@@ -1,0 +1,35 @@
+tariff loaded from tariff.txt: fixed=5000 r1=0 r2=225 r3=450 paise, peak +20% 18:00-22:00
+
+register rolled over during the month: yes
+month total: 552000 Wh (552 kWh), peak: 192000 Wh
+
+fixed charge:              Rs 50.00
+energy charge (slabs):     Rs 1809.00
+peak premium:              Rs 125.84
+TOTAL:                     Rs 1984.84
+
+--- sizes and largest values ---
+sizeof(wh_t)=4 sizeof(whsum_t)=8 sizeof(paise_t)=8
+old 16-bit register max: 65535 Wh = 65 kWh (a house exceeds this in days)
+largest house per year : 87600000 Wh (fits unsigned 32-bit max 4294967295: yes)
+largest district / yr  : 70080000000000 Wh (fits unsigned 32-bit: no, unsigned long long: yes)
+readings per house per year: 35040
+=== no peak tariff
+tariff loaded from tariff_no_peak.txt: fixed=5000 r1=0 r2=225 r3=450 paise, peak +0% 18:00-22:00
+
+register rolled over during the month: yes
+month total: 552000 Wh (552 kWh), peak: 192000 Wh
+
+fixed charge:              Rs 50.00
+energy charge (slabs):     Rs 1809.00
+peak premium:              Rs 0.00
+TOTAL:                     Rs 1859.00
+
+--- sizes and largest values ---
+sizeof(wh_t)=4 sizeof(whsum_t)=8 sizeof(paise_t)=8
+old 16-bit register max: 65535 Wh = 65 kWh (a house exceeds this in days)
+largest house per year : 87600000 Wh (fits unsigned 32-bit max 4294967295: yes)
+largest district / yr  : 70080000000000 Wh (fits unsigned 32-bit: no, unsigned long long: yes)
+readings per house per year: 35040
+=== missing file
+cannot use tariff file 'missing.txt' (code -1): stopping, no bill produced
