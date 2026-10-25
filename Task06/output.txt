@@ -1,0 +1,19 @@
+--- wrong specifier test ---
+long 5000000000 printed with %d : 705032704 (wrong, undefined behaviour)
+long 5000000000 printed with %ld: 5000000000 (correct)
+
+--- specifiers ---
+%d=-7 %u=42 %ld=123456789 %lld=9876543210 %f=1.500000 %lf=2.250000 %c=D %s=Grama Jyothi
+
+--- billing from stdin ---
+house 101: 330 units -> Rs 860.00
+house 102: 256 units -> Rs 527.00
+line 3: invalid input (scanf returned 2), skipping rest of line
+house 104: reading out of range 0..65535
+house 105: 100 units -> Rs 50.00
+== fgets version
+house 101: 330 units
+house 102: 256 units
+line 3: invalid input, skipped
+house 104: 65431 units
+house 105: 100 units
