@@ -1,7 +1,7 @@
-# CSA02-<RegisterNumber>-Assignment1
+# CSA0221--1913260069--Assignment1
 
-**Student name:** <your name>
-**Register number:** <your register number>
+**Student name:** bhuvan S J
+**Register number:** 1913260069
 **Course:** C Programming, Assignment 1 (CO1): Grama Jyothi Rural Electricity Co-operative billing program
 **Compiler:** gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0 (GCC 13)
 
