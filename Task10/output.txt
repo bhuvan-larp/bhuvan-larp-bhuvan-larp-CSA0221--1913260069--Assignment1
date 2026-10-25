@@ -1,0 +1,17 @@
+bills    paise total (Rs) float total (Rs) double total(Rs) float diff   double diff 
+4000     1656875.00       1656875.00       1656875.00       0.00         0.000000    
+         fits in int? yes   long (this system)? yes   long long? yes
+60000    24853125.00      24846614.00      24853125.00      -6511.00     0.000000    
+         fits in int? NO (overflow)   long (this system)? yes   long long? yes
+800000   331375000.00     331515424.00     331375000.00     140424.00    0.000000    
+         fits in int? NO (overflow)   long (this system)? yes   long long? yes
+
+sizeof on this system vs minimum guaranteed by the C standard:
+short     : 2 bytes (standard minimum 2)
+int       : 4 bytes (standard minimum 2)
+long      : 8 bytes (standard minimum 4)
+long long : 8 bytes (standard minimum 8)
+INT_MAX = 2147483647, LONG_MAX = 9223372036854775807, LLONG_MAX = 9223372036854775807
+
+Double loses integer exactness above 2^53 = 9007199254740992 paise (about Rs 9e13);
+district worst case is about 4e11 paise, so double is exact in value but adds rounding in fractions.
